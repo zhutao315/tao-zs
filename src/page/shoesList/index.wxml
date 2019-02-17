@@ -1,0 +1,44 @@
+
+<view class="page">
+    <view class="page__hd">
+        <view class="weui-cell">
+                <view class="weui-cell__bd" style="font-size:12px;">
+                    <view>{{shop.address}}</view>
+                    <view>{{shop.phone}}</view>
+                </view>
+                <view class="weui-cell__ft">
+                    <view class="copy-address-btn" bindtap="copyTBL">复制地址</view>
+                </view>
+        </view>
+    </view>
+
+    <view class="page__bd">
+        
+        <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <swiper-item wx:for="{{swipers}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="toGoods">
+            <image class="swiper-item" src="{{item}}" mode="aspectFill" />
+        </swiper-item>
+        </swiper>
+
+        <view class="weui-flex" style="margin-bottom:3px;" bindtap="selectType">
+            <view class="weui-flex__item"><view class="placeholder {{selectedTypeList[0]}}" data-type="0">男</view></view>
+            <view class="weui-flex__item"><view class="placeholder {{selectedTypeList[1]}}" data-type="1">女</view></view>
+            <view class="weui-flex__item"><view class="placeholder {{selectedTypeList.bas}}" data-type="bas">篮球鞋</view></view>
+            <view class="weui-flex__item"><view class="placeholder {{selectedTypeList.ban}}" data-type="ban">休闲鞋</view></view>
+        </view>
+
+        <view class="weui-grids" style="padding-bottom:20px;" bindtap="viewImage">
+            <block wx:for="{{shoesList}}" wx:key="index">
+                <view  class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" data-src="{{item}}"  src="{{item}}"  />
+                </view>
+            </block>
+        </view>
+
+        <view class="details-image {{dImage.class}}" bindtap="hideModal">
+            <image mode="widthFix" src="{{dImage.src}}" bindload="imageLoaded" />
+        </view>
+
+
+    </view>
+</view>

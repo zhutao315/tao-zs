@@ -1,0 +1,12 @@
+<view class="user">
+    <view class="user-header">
+        头像
+    </view>
+
+    <view class="user-scan">
+        扫描商品
+    </view>
+    <view class="user-order">
+        订单详情
+    </view>
+</view>

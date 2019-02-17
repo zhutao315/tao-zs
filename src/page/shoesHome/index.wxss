@@ -1,0 +1,28 @@
+.brands-cotent image{
+	width:200px;
+	height:80px;
+	padding-bottom:10px;
+}
+.brands-cotent {
+	width:100%;
+}
+.brands-cotent > view {
+	width:100%;
+	display:flex;
+	align-items:center;
+	align-content:center;
+	justify-content:center;
+	border-bottom:1px solid #ddd;
+	margin-bottom:20px;
+}
+.shoes-home {
+	height:100vh;
+	display:flex;
+	align-items:center;
+	align-content:center;
+	justify-content:center;
+}
+
+.nike,.anta,.lining,.adi{
+	
+}

@@ -1,0 +1,70 @@
+.container{
+	width:100%;
+}
+.tab{
+	height: 90rpx;
+}
+.tabbox {
+	width: 900rpx;
+	height: 90rpx;
+	color: #666;
+	font-size: 28rpx;
+	border-top:1px solid #999;
+	border-bottom: 1px solid #999;
+}
+.tabItem {
+	width:110rpx;
+	margin-left: 20rpx;
+	margin-right: 20rpx;
+	height: 90rpx;
+}
+.active {
+	color:red;
+	border-bottom: 2px solid red;
+}
+
+.content {
+	height: 1000rpx;
+}
+.item {
+	width: 100%;
+	height: 302rpx;
+	background: #fff;
+	border-bottom:1px solid #eee;
+	padding:15px 12px 10px;
+	align-content: stretch;
+}
+.itemLeft {
+	width:191px;
+}
+.itemTitle {
+	font-size:18px;
+	color:#333;
+	height: 50px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom:10px;
+}
+.itemContent {
+	font-size:14px;
+	color:#666;
+	height: 40px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.itemAuthor {
+	font-size:11px;
+	color:#666;
+	margin-top:10px;
+}
+.itemRight {
+	width: 135px;
+}
+.itemImg {
+	width: 136px;
+	height: 102px;
+}
+.itemOther {
+	font-size:11px;
+	color:#666;
+}

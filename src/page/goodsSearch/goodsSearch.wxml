@@ -1,0 +1,20 @@
+<!--pagoodsSearchagoodsSearcharch.wxml-->
+<view class="containsView">
+  <view class="headView">
+    <input id="keysearch" bindinput="bindKeyInput" placeholder="请输入需要搜索的商品" value="{{hotsearch}}" class="input input-search" placeholder-style="font-size:15px" focus></input>
+    <button class="btn-search" bindtap="search">{{cancelValue}}</button>
+  </view>
+
+  <view class="divLine"></view>
+
+  <view wx:if="{{list.length>0}}">
+    <!--历史搜索-->
+    <view class="histroysearch"><span>历史搜索：</span></view>
+
+    <!--list-->
+    <view class="seachlist" wx:for="{{list}}" wx:for-item="itemWord" wx:for-index="idx" wx:key="idx">
+      <button data-name="{{itemWord}}" class="button" wx:if="{{itemWord != ''}}" bindtap="clickName">{{itemWord}}</button>
+    </view>
+    <button style="display:block;margin-top:30rpx;border-radius:10px;" bindtap="clearSearchStorage">清空浏览记录</button>
+  </view>
+</view>

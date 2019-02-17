@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>tao-zs</title>
+  <style>
+  body { height:100vh; background: #fff; color: #3D3D3D; }
+.mapBox { width: 100vw; font-size: 14px; height: 100vh; }
+.mapBox > #mapInfo { padding: 20px; }
+.mapBox > div { width: 100%; height: 100%; }
+.mapBox > p { padding: 20px; }
+.addShop { display: block; color: #fff; background: #00CC99; border: none; font-size: 14px; width: 50vw; margin: 0.4rem 0 0 25vw; padding: 0.32rem; border-radius: 0.8rem; }
+.mapInfo > p.center { text-align: center; }
+.mapInfo > p { line-height: 0.533333rem; }
+.mapInfo > button { display: block; margin: 0.106667rem auto; color: #0c9; background: #fafafb; border: 1px solid #0c9; border-radius: 0.133333rem; padding: 0.15rem 0.3rem; }
+  </style>
+  </head>
+  <body>
+    <div class="mapBox">
+      <div id="mapBox">
+          <p id="mapInfo"></p>
+      </div>
+  </div>
+  </body>
+  <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+<script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp"></script>
+<script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<!--<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>-->
+<script>
+ //微信JS-SDK 获取当前位置经纬度
+ wx.config({
+                //debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                appId: 'wx20c6bf9aa4cab6d6', // 必填，企业号的唯一标识，此处填写企业号corpid
+                timestamp: data.data.timestamp, // 必填，生成签名的时间戳
+                nonceStr: data.data.nonceStr, // 必填，生成签名的随机串
+                signature: data.data.signature,// 必填，签名，见附录1
+                jsApiList: ['getLocation']  // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+            });
+            wx.ready(function(){
+                var longitude,latitude;
+                wx.getLocation({
+                    type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+                    success: function (res) {
+                        //********注意：这里就获取到了当前位置的经纬度，可以将它传参给需要用到经纬度的方法********
+                        latitude = res.latitude;
+                        longitude = res.longitude;
+                        //showMap(latitude,longitude);
+                    },
+                    cancel: function (res) {
+                        //无法获取地理位置
+                        //layer.open({ content: "您拒绝了授权地理位置，将不能获取最近的商铺站点", time: 3 });
+                    },
+                    fail: function (res) {
+                        //无法获取地理位置
+                        //layer.open({ content: "获取地理位置失败", time: 3 });
+                    }
+                });
+            });
+            wx.error(function(res){    //微信验证失败
+                //layer.open({ content: "获取地理位置失败", time: 3 });
+            });
+</script>
+  </html>

@@ -1,0 +1,9 @@
+<view class="shoes-home">
+    <view class="brands-cotent">
+        <view class="nike"><image src="/image/shoesBrand/nike.jpg" /></view>
+        <view class="adi"><image src="/image/shoesBrand/adi.jpg" /></view>
+
+        <view class="anta"><image src="/image/shoesBrand/anta.jpg" /></view>
+        <view class="lining"><image src="/image/shoesBrand/lining.jpg" /></view>
+    </view>
+</view>

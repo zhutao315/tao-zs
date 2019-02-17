@@ -1,0 +1,68 @@
+<!--page/goods/index.wxml-->
+<!-- banner -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!--<view>
+  <image src="{{imgUrls[0]}}"  mode="aspectFit" />
+</view>-->
+<scroll-view scroll-y="true">
+  <view class="detail">
+    <text class="title">{{name}}</text>
+    <view class="price"><span>￥{{price}}</span></view>
+    <view>
+      <text class="product-header">商品规格</text>
+      <view class="product-spec">
+        <view class="product-spec-color">
+          <view>颜色：<text style="margin-left:5px;">黑色</text></view>
+          <block wx:key="{{index}}" wx:for="{{imgUrls}}">
+            <image class="{{index==selectSpec.colorIndex&&'selected'}}" src="{{item}}" data-src="{{item}}" bindtap="selectColor" data-index="{{index}}"/>
+          </block>
+        </view>
+        <view class="product-spec-size">
+          <text class="{{selectSpec.size=='S'&&'selected'}}" bindtap="selectSize" data-size="S">S</text>
+          <text class="{{selectSpec.size=='M'&&'selected'}}" bindtap="selectSize" data-size="M">M</text>
+          <text class="{{selectSpec.size=='L'&&'selected'}}" bindtap="selectSize" data-size="L">L</text>
+          <text class="{{selectSpec.size=='XL'&&'selected'}}" bindtap="selectSize" data-size="XL">XL</text>
+          <text class="{{selectSpec.size=='XXL'&&'selected'}}" bindtap="selectSize" data-size="XXL">XXL</text>
+        </view>
+      </view>
+    </view>
+    <view>
+      <text class="product-header">商品描述</text>
+      <text class="product-dec">适合在寒冷天气进行网球及其他球拍类运动。笼式网球、乒乓球、壁球、羽毛球。
+        全年可穿的理想网球运动裤！织物使你在场上保持温暖。脚踝处便携的拉链，使裤子非常容易脱下。
+      </text>
+    </view>
+  </view>
+
+  <view class="separate"></view>
+  <!-- sku选择 -->
+  <!--<text bindtap="toggleDialog">请选择购买数量</text>
+  <view class="separate"></view>
+  <text>商品评价</text>
+  <text class="text-remark">东西还可以，好评~</text>-->
+  <view class="separate"></view>
+  <text style="font-weight:bold;padding:0 8px;">商品详情:</text>
+  <block wx:for-items="{{detailImg}}" wx:key="name">
+    <image class="image_detail" src="{{item}}" />
+  </block>
+  <view class="temp"></view>
+</scroll-view>
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+  <!--<image bindtap="toCar" src="../../image/home-hl.png" />
+  <view class="line_nav"></view>
+  <image bindtap="addLike" src="{{isLike?'../../image/home.png':'../../image/home-hl.png'}}" />
+  <button class="button-green" bindtap="addCar" formType="submit">加入购物车</button>-->
+  <button style="width:100%" class="button-red" bindtap="immeBuy" formType="submit">预约下单</button>
+</view>
+
+<!--<view class="turntable-lottery">
+  <include src="../utils/turntable_lottery/turntable_lottery.wxml" />
+</view>-->
+

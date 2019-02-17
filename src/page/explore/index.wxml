@@ -1,0 +1,44 @@
+
+<view class="container">
+    <scroll-view scroll-x class="tab">
+        <view class="tabbox flex-row">
+            <view class="tabItem flex-row flex-center {{currentTab==index ? 'active' : ''}}" wx:for="{{channel}}"
+                  wx:key="{{index}}" data-idx="{{index}}" bindtap="switchTab">
+                <text>{{item.name}}</text>
+            </view>
+        </view>
+    </scroll-view>
+    <scroll-view scroll-y class="content" bindscrolltoupper="upper" bindscrolltolower="lower" >
+        <view class="item flex-row flex-between" hidden="{{currentTab==0 ? '' : true}}" wx:for="{{lists}}" wx:key="{{index}}">
+            <view class="itemLeft flex-column">
+                <text class="itemTitle">{{item.title}}</text>
+                <text class="itemContent">{{item.content}}</text>
+                <text class="itemAuthor">{{item.author}}</text>
+            </view>
+
+            <view class="itemRight flex-column flex-between">
+                <image class="itemImg" src="{{item.image}}" mode="aspectFit" />
+                <view class="itemOther flex-row flex-between">
+                    <text>{{item.time}}</text>
+                    <text>{{item.read}}</text>
+                </view>
+            </view>
+            
+        </view>
+        <view class="" hidden="{{currentTab==1 ? '' : true}}">
+            <text>生活</text>
+        </view>
+        <view class="" hidden="{{currentTab==2 ? '' : true}}">
+            <text>风尚</text>
+        </view>
+        <view class="" hidden="{{currentTab==3 ? '' : true}}">
+            <text>亲子</text>
+        </view>
+        <view class="" hidden="{{currentTab==4 ? '' : true}}">
+            <text>数码</text>
+        </view>
+        <view class="" hidden="{{currentTab==5 ? '' : true}}">
+            <text>美食</text>
+        </view>
+    </scroll-view>
+</view>

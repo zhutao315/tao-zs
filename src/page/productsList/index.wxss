@@ -1,0 +1,312 @@
+
+.search{
+	display: flex;
+  	flex-direction: row;
+  	height: 50rpx;
+	align-items: center;
+}
+
+.search .scan{
+	display: flex;
+  	flex-direction: column;
+	align-items: center;
+	width: 12%;
+    margin-left:2px;
+}
+
+.search .search-input{
+	padding: 5rpx;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	/*width: 80%;*/
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+	align-items: center;
+    margin:10rpx auto;
+
+    width:100%;
+    margin-left:12px;
+}
+
+.search-icon{
+	width: 30rpx;
+	height: 30rpx;
+}
+
+.search-text{
+	top:0px;
+	padding:0px;
+	left: 0rpx;
+	right: 0rpx;
+  width:100%;
+}
+
+
+.widgets-img{
+	width: 42rpx;
+	height: 42rpx;
+}
+.widgets-title{
+	color: #888888;
+    font-size: 1px;
+}
+
+
+
+
+
+.search {
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  height: 75rpx;
+  align-items: center;
+  background: #fbf9fe;
+  /*margin: 10rpx auto;*/
+  padding-top:10rpx!important;
+  padding-bottom:10rpx!important;
+}
+
+/*.search .search-input {
+  margin-left: 24rpx;
+  padding: 5rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  flex-grow: 1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  align-items: center;
+  border: 1px solid #333;
+}*/
+
+.search-jd {
+  font-size: 36rpx;
+  color: #f23030;
+  margin-left: 10rpx;
+}
+
+.search-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin: auto 10rpx;
+}
+
+.search-text {
+  flex-grow: 1;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.login {
+  margin: auto 24rpx;
+  font-size: 32rpx;
+  color: #666;
+}
+
+swiper {
+  width: 750rpx;
+  height: 330rpx;
+  margin-bottom: 10px;
+}
+
+.swiper-item {
+  display: block;
+  width: 750rpx;
+  height: 322rpx;
+}
+
+.big-logo {
+  width: 750rpx;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.logoinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 149rpx;
+  height: 150rpx;
+  margin-top: 10rpx;
+}
+
+logoimg {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.logotext {
+  color: #aaa;
+  font-size: 22rpx;
+  margin: 10rpx auto;
+}
+
+.seckill {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.live {
+  width: 100%;
+  height: 78rpx;
+}
+
+.liveinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 78rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.liveitem {
+  width: 50%;
+  height: 185rpx;
+}
+
+
+
+.products-filter{
+  padding:8px;
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+}
+.products-filter view{
+  margin-right:10px;
+}
+.products-filter view.selected{
+  color:red;
+}
+.productList-item-detail>text{
+  margin-bottom:5px;
+}
+.productList-price{
+  font-size:25rpx;
+}
+.productList-price text{
+  display:inline-block;
+  font-size:30rpx;
+  color:#c30d22;
+}
+
+
+/*scroll page*/
+.loading{
+  padding:10px;
+  text-align:center;
+  width:100%;
+}
+.loading:before{
+  display: inline-block;
+  margin-right: 5rpx;
+  vertical-align: middle;
+  content: '';
+  width: 40rpx;
+  height: 40rpx;
+  /*background: url(/images/icon-loading.png) no-repeat;*/
+  background-size: contain;
+  animation: rotate 1s linear infinite;
+}
+.loading.complete:before{
+  display: none;
+}
+
+
+.circle-box {
+  text-align:center;
+  margin-top:8vw;
+  height:100%;
+  position:relative;
+  width:100%;
+
+}
+.circle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform:translate(0px,-20px);
+
+}
+
+.get-coupon{
+  font-size:11px;
+  width:63px;
+  text-align:center;
+  margin-bottom:8px;
+  background-color:#c30d22;
+  color:#fff;
+  padding:2px 6px;
+  border-radius:10px;
+}
+.process-circle{
+  padding-right:3px;
+  padding-left:6px;
+  position:relative;
+}
+.process-circle:before{
+  content:"";
+  height:10px;
+  width:10px;
+  border-radius :10px;
+  background-color:#efeff4;
+  position :absolute;
+  top:-5px;
+  left:-5px;
+}
+.process-circle:after{
+  content:"";
+  height:10px;
+  width:10px;
+  border-radius :10px;
+  background-color:#efeff4;
+  position :absolute;
+  bottom:-5px;
+  left:-5px;
+}
+.circle-box .circle-text{
+  position:absolute;
+  font-size:11px;
+  color:#c30d22;
+  width:25px;
+  top:-5px;
+  left:19px;
+}
+.product-coupon{
+  background-color:#fff;
+  border-radius :5px;
+}
+.productList-item-detail{
+  padding-right:5px;
+}
+
+
+
+/*wechatTX*/
+.product-coupon{
+  width:50%;
+  display:inline-block;
+  padding:0 8px;
+  text-align :center;
+}
+.productList-price {
+  margin-top:5px;
+}
+.product-coupon.ev{
+  border-right:1px solid #ddd;
+}

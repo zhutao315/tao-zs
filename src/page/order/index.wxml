@@ -1,0 +1,27 @@
+<!--点击扫描商品-->
+<view class="detail-nav detail-nav-top" >
+    <text>以选择2件商品</text>
+    <text class="btn btn-scan" >扫描商品</text>
+</view>
+
+<!--商品信息模块-->
+<view class="cart-list">
+    <view class="cart-item" wx:for="{{list}}" wx:key="{{index}}">
+        <view bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" class="inner txt">
+            <image src="https://pixl.decathlon.com.cn/p1250319/k$7cb3dcd51b4a251f06ea090d5cdf991b/Dry100+Tennis+Bottoms+Black+1250319.jpg?f=100x100"/>
+            <view>
+                <text>LANCOME兰蔻小黑瓶精华肌底液</text>
+                <text>黑色，L码一件</text>
+                <text>编码: <text class="goods-code">2343576878</text></text>
+            </view>
+        </view>
+
+        <view  bindtap= "delItem" class="inner del">删除</view>
+    </view>
+</view>
+
+
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+  <button style="width:100%" class="button-red" bindtap="immeBuy" formType="submit">确定下单</button>
+</view>

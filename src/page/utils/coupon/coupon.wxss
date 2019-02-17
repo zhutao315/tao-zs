@@ -1,0 +1,36 @@
+.stamp{
+  width:260px;
+  margin:0 auto;
+  background-color:#eee;
+}
+.stamp .par{
+  background-color:#c30d22;
+  padding:12px;
+  color:#fff;
+  width:75px;
+  text-align:center;
+  display:inline-block;
+}
+.stamp .sign{
+  display:inline-block;
+  font-size:20px;
+}
+.stamp .coupon-value{
+  display:inline-block;
+  font-size:35px;
+}
+
+.coupon-info{
+  display:inline-block;
+  width:180px;
+  padding:5px 10px;
+}
+.coupon-info .product-name{
+  font-size:12px;
+}
+.coupon-info .product-date{
+  display:block;
+  font-size:10px;
+  color:#999;
+  padding-top:8px;
+}

@@ -1,0 +1,25 @@
+.container {
+	background: #fff;
+	width: 100%;
+	padding: 20px 12px 0;
+}
+
+.inputBox {
+	height: 45px;
+	border-bottom: 1px solid #ddd;
+	font-size: 16px;
+	color:#666;
+}
+input {
+	height: 30px;
+	flex-grow: 1;
+	margin-left: 10px;
+}
+image {
+	width:22px;
+	height: 22px;
+}
+
+button {
+	margin-top:20px;
+}

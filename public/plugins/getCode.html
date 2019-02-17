@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<script>
+    function getUrlParam(name){
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return decodeURIComponent(r[2].replace(/%20/g,"+")); return null;
+    }
+
+    var companyAppId = "wx6874cb6feb9a8bf3";   //公司自己的appid
+    var wxCode = getUrlParam('code');
+    //如果url上没有code，则跳转授权
+    if(!wxCode){
+        var url = window.location.href;
+        window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?' +
+                'appid='+companyAppId+'&redirect_uri='+encodeURIComponent(url)+
+                '&response_type=code&scope=snsapi_base&state=STATE#wechat_redirect';
+    }else {
+        //如果url上有code，则说明已经授权完毕可以返回code给主页面
+        window.parent.postMessage(wxCode,"*");
+    }
+</script>
+</html>

@@ -1,0 +1,73 @@
+.page .weui-flex .placeholder {
+    margin: 5px;
+    padding: 0 10px;
+    background-color: #ebebeb;
+    height: 2.3em;
+    line-height: 2.3em;
+    text-align: center;
+    color: #cfcfcf;
+}
+
+.page .weui-flex .btn-primary {
+  background-color: #1AAD19;
+}
+
+.copy-address-btn {
+  background-color: red;
+  color:#fff;
+  font-size:12px;
+  padding:5px 8px;
+  margin-left:10px;
+}
+
+swiper {
+  width: 750rpx;
+  height: 330rpx;
+}
+
+.swiper-item {
+  display: block;
+  width: 750rpx;
+  height: 322rpx;
+}
+
+.weui-grid__icon {
+width:90px;
+height:90px;
+margin:0 auto;
+}
+
+.weui-grid {
+float:left;
+padding:10px 0px;
+width:33.33333333%;
+box-sizing:border-box;
+border-right:1rpx solid #d9d9d9;
+border-bottom:1rpx solid #d9d9d9;
+padding-bottom:5px;
+}
+
+.details-image {
+  position: fixed;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-color: #d9d9d9;
+  padding: 0 15px;
+
+  
+  background: #999c;
+
+  display:none;
+}
+
+.d-image {
+  display: flex;
+  align-items: center;
+}
+
+.details-image > image {
+  width: 100%;
+  height: auto;
+}
+

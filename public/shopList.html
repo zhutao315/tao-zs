@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="./image/logo.ico">
+    <title>tao-zs</title>
+    <style>
+      body{
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      .header{
+        text-align: center;
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        height: 64px;
+        overflow: hidden;
+      }
+      .header img {
+        height: 261px;
+      }
+      .weui-cell {
+        padding:10px 15px;
+        position:relative;
+        display:-webkit-box;
+        display:-webkit-flex;
+        display:flex;
+        display: -webkit-flex;
+        -webkit-box-align:center;
+        -webkit-align-items:center;
+        align-items:center;
+        background-color:#fff;
+        border-bottom: 1px solid #ddd;
+        font-size:17px;  
+        background-color: #fff;
+        margin-bottom: 5px;
+        padding-right: 10px;
+      }
+      .shop-image{
+        width: 90px;
+        height: 90px;
+        margin-right: 10px;
+      }
+      .shop-image > img {
+        width: 100%;
+        height: 100%;
+      }
+      .shop-address{
+        font-size: 12px;
+      }
+      .shop-desc {
+        display: flex;
+        display: -webkit-flex;
+      }
+      .shop-name {
+        flex: 1;
+      }
+      .shop-distance{
+        color: #999;
+        width: 85px;
+        font-size: 15px;
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .text {
+        display:block;
+        margin: 5px;
+        font-size: 13px;
+      }
+      #shopList {
+        position: fixed;
+        display: block;
+        margin-top: 3px;
+      }
+
+      #map {
+        display: none;
+      }
+
+      .mapBox { width: 100vw; font-size: 14px; height: 100vh; }
+      .mapBox > #mapInfo { padding: 20px; }
+      .mapBox > div { width: 100%; height: 100%; }
+      .mapBox > p { padding: 20px; }
+      .addShop { display: block; color: #fff; background: #00CC99; border: none; font-size: 14px; width: 50vw; margin: 0.4rem 0 0 25vw; padding: 0.32rem; border-radius: 0.8rem; }
+      .mapInfo > p.center { text-align: center; }
+      .mapInfo > p.address { margin-top: 8px; }
+      .mapInfo > p.address { font-size:12px;line-height: 1 }
+      .mapInfo > p { line-height: 0.533333rem; }
+      .mapInfo > button { display: block; margin: 0.106667rem auto; color: #0c9; background: #fafafb; border: 1px solid #0c9; border-radius: 0.133333rem; padding: 0.15rem 0.3rem; }
+      .tab {
+        display: flex;
+        display: -webkit-flex;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+      }
+      .tab > div {
+        padding: 10px;
+        text-align: center;
+        display: inline-block;
+        flex:1;
+        margin-bottom: 1px;
+      }
+      .tab-map-box{
+        border-right: 1px solid #ddd;
+      }
+    </style>
+  
+  </head>
+  <body>
+    <header class="header">
+      <img src="./image/logo.png" />
+    </header>
+    <div class="tab">
+      <div class="tab-map-box" onclick="showTab('map')">地图</div>
+      <div class="tab-shop-list" onclick="showTab('shopList')">列表</div>
+    </div>
+    <div id="map" class="mapBox">
+      <div id="mapBox">
+          <p id="mapInfo"></p>
+      </div>
+    </div>
+    <div id="shopList" class="shop-list">
+      
+        <div class="weui-cell">
+            <div class="shop-image"><img src="http://webmap0.bdimg.com/client/services/thumbnails?width=132&height=104&align=center,center&quality=100&src=http%3A%2F%2Fhiphotos.baidu.com%2Flbsugc%2Fpic%2Fitem%2F94cad1c8a786c9171e9329fac53d70cf3ac75764.jpg"></div>
+            <div style="flex: 1">
+              <div class="shop-address">杭州市西湖区古墩路588号SCPG印象城购物中心</div>
+              <div class="shop-desc">
+                <div class="shop-name">
+                    <div class="text">(0571)88858666</div>
+                    <div class="text"><strong>阿迪达斯(杭州印象城购物中心店)</strong></div>    
+                </div>
+                  <div class="shop-distance">
+                      距您 <span>---</span>
+                  </div>
+              </div>
+              
+            </div>
+        </div>
+
+        <div class="weui-cell">
+            <div class="shop-image"><img src="http://webmap0.bdimg.com/client/services/thumbnails?width=132&height=104&align=center,center&quality=100&src=http%3A%2F%2Fhiphotos.baidu.com%2Flbsugc%2Fpic%2Fitem%2F94cad1c8a786c9171e9329fac53d70cf3ac75764.jpg"></div>
+            <div style="flex: 1">
+              <div class="shop-address">杭州市西湖区古墩路588号SCPG印象城购物中心</div>
+              <div class="shop-desc">
+                <div class="shop-name">
+                    <div class="text">(0571)88858666</div>
+                    <div class="text"><strong>阿迪达斯(杭州印象城购物中心店)</strong></div>    
+                </div>
+                  <div class="shop-distance">
+                      距您 <span>---</span>
+                  </div>
+              </div>
+              
+            </div>
+        </div>
+
+        <div class="weui-cell">
+            <div class="shop-image"><img src="http://webmap0.bdimg.com/client/services/thumbnails?width=132&height=104&align=center,center&quality=100&src=http%3A%2F%2Fhiphotos.baidu.com%2Flbsugc%2Fpic%2Fitem%2F94cad1c8a786c9171e9329fac53d70cf3ac75764.jpg"></div>
+            <div style="flex: 1">
+              <div class="shop-address">杭州市望江东路333号物美大卖场望江店1层</div>
+              <div class="shop-desc">
+                <div class="shop-name">
+                    <div class="text">0571-87069612</div>
+                    <div class="text"><strong>NIKE(望江换季优惠店)</strong></div>    
+                </div>
+                  <div class="shop-distance">
+                      距您 <span>---</span>
+                  </div>
+              </div>
+              
+            </div>
+        </div>
+
+        <div class="weui-cell">
+            <div class="shop-image"><img src="http://webmap0.bdimg.com/client/services/thumbnails?width=132&height=104&align=center,center&quality=100&src=http%3A%2F%2Fhiphotos.baidu.com%2Flbsugc%2Fpic%2Fitem%2F94cad1c8a786c9171e9329fac53d70cf3ac75764.jpg"></div>
+            <div style="flex: 1">
+              <div class="shop-address">杭州市望江东路333号物美大卖场望江店1层</div>
+              <div class="shop-desc">
+                <div class="shop-name">
+                    <div class="text">400-999-5999(官方)</div>
+                    <div class="text"><strong>阿迪达斯(物美大卖场望江店)</strong></div>    
+                </div>
+                  <div class="shop-distance">
+                      距您 <span>---</span>
+                  </div>
+              </div>
+              
+            </div>
+        </div>
+    </div>
+  </body>
+  <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=5TLBZ-N5U6O-HKNW7-S3IAX-RFMD7-CKBIZ"></script>
+  <script type="text/javascript" src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
+  <script type="text/javascript" src="http://image-upyun-zhu.test.upcdn.net/DB/shopList.js"></script>
+  <script>
+  function formatDistance(num) {
+    if (num < 1000) {
+      return num.toFixed(0) + 'm';
+    }else if (num > 1000) {
+      return (num / 1000).toFixed(1) + 'km';
+    }
+  }
+  function showTab(id){
+    document.getElementById(id).style.display='block';
+    let h_id = id === 'map' ? 'shopList' : 'map';
+    document.getElementById(h_id).style.display='none';
+  }
+  function viewShop(id) {
+    window.location.href = `./index.html?id=${id}`;
+  }
+  function createDom(data) {
+    let template = `<div class="weui-cell" onclick="viewShop('${data.id}')"><div class="shop-image"><img src="${data.image}"></div><div style="flex: 1"><div class="shop-address">${data.address}</div><div class="shop-desc"><div class="shop-name"><div class="text">${data.phone}</div><div class="text"><strong>${data.name}</strong></div> </div><div class="shop-distance">距您 <span>${data.distance}</span></div></div></div></div>`;
+      return template;
+  }
+  function setData(data){
+    let doms = document.getElementById('shopList');
+    let str = '';
+    data.list.forEach(t => {str+=createDom(t)})
+    doms.innerHTML = str;
+  }
+  function fetchDistance(location, arr){
+    let url = `https://apis.map.qq.com/ws/distance/v1/?from=${location}&to=${arr}&key=5TLBZ-N5U6O-HKNW7-S3IAX-RFMD7-CKBIZ&output=jsonp&callback=calculateDistance`;
+    var script = document.createElement("script");
+    script.src = url;
+    document.getElementsByTagName("body")[0].appendChild(script);  
+  }
+  function calculateDistance(res){
+    LIST.forEach((element, key) => {
+                  element.distance = formatDistance(res.result.elements[key].distance);
+                  element.realDistance = res.result.elements[key].distance;
+              })
+              LIST.sort((a, b) => {
+                  return a.realDistance - b.realDistance;
+              });   
+              
+              setData({list:LIST});
+  }
+
+  function jsonp(obj) {
+        //定义一个处理Jsonp返回数据的回调函数
+    window["callback"] = function(object) {
+            obj.success(JSON.parse(object));
+        }
+        var script = document.createElement("script");
+        //组合请求URL
+        script.src = obj.url + "?fn=callback";
+        for(key in obj.data){
+            script.src +="&" + key + "=" + obj.data[key];
+        }
+        //将创建的新节点添加到BOM树上
+        document.getElementsByTagName("body")[0].appendChild(script);  
+    }
+
+
+  
+  var geolocation = new qq.maps.Geolocation("OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77", "what can we buy");
+  geolocation.getLocation((p) => {
+    let res = [p.lat, p.lng];
+    let location = res[0] + ',' + res[1];
+    showMap(res[0], res[1]);
+    let arr = LIST.map((v) => {return v.lat + ',' + v.lng});
+    fetchDistance(location, arr.join(','));
+  });
+navigator.geolocation.getCurrentPosition((position) => {
+    var lat=position.coords.latitude;
+    var lng=position.coords.longitude;
+    qq.maps.convertor.translate(new qq.maps.LatLng(lat,lng), 1, function(res){
+            //取出经纬度并且赋值
+            let location = res[0] + ',' + res[1];
+            showMap(res[0], res[1]);
+            let arr = LIST.map((v) => {return v.lat + ',' + v.lng});
+            fetchDistance(location, arr.join(',')).then(calculateDistance);
+    });
+});
+
+function showMap(latitude, longitude){
+    var map = new qq.maps.Map(document.getElementById("mapBox"),{    //地图部分初始化
+        zoom: 11,               //设置地图缩放级别
+        center: new qq.maps.LatLng(latitude, longitude),     //设置中心点
+        zoomControl: true,    //不启用缩放控件
+        zoomControlOptions: {
+            position: qq.maps.ControlPosition.TOP_LEFT
+        },
+        mapTypeControlOptions: {  //设置控件的地图类型为普通街道地图
+            mapTypeIds: qq.maps.MapTypeId.ROADMAP
+        }
+    });
+    var anchor = new qq.maps.Point(6, 6),
+        size = new qq.maps.Size(24, 24),
+        origin = new qq.maps.Point(0, 0),
+        icon = new qq.maps.MarkerImage('./image/center.gif', size, origin, anchor);
+    var marker = new qq.maps.Marker({
+        icon: icon,
+        map: map,
+        position:map.getCenter()});
+    var info = new qq.maps.InfoWindow({ map: map });      //添加提示窗
+
+    var result = { "code":0, "msg":"success"};
+    result.data = LIST.map((shop) => {
+        return {
+          id: shop.id,
+          name: shop.name,
+          locate: shop.address,
+          latitude: shop.lat, 
+          longitude: shop.lng
+        }
+    });
+    //result中数据 用于显示标记、和标记点击时的提示信息
+    if(result.code==0 && result.msg=="success"){
+        for(var i=0; i<result.data.length; i++){
+            var data = result.data[i];
+            var marker = new qq.maps.Marker({ position: new qq.maps.LatLng(data.latitude, data.longitude), map: map });    //创建标记
+            //***将必要的数据存入每一个对应的marker对象
+            marker.id = data.id;
+            marker.name = data.name;
+            marker.locate = data.locate;
+            qq.maps.event.addListener(marker, 'click', function(e) {
+              console.log(e.target);
+                info.open();  //点击标记打开提示窗
+                info.setContent('<div class="mapInfo"><p class="center name">'+e.target.name+'</p><p class="address">'+e.target.locate+'</p><button type="button" onclick="bindShop(\''+e.target.id+','+e.target.position.lat+','+e.target.position.lng+'\')">进入店铺</button></div>');  //***设置提示窗内容（这里用到了marker对象中保存的数据）
+                info.setPosition(new qq.maps.LatLng(e.target.position.lat, e.target.position.lng));  //提示窗位置
+            });
+        }
+    }else{
+        //layer.open({ content: "获取附近商铺失败", skin: 'msg', time: 2 });
+    }
+}
+
+function bindShop(shopInfo){    //地图标注提示窗上按钮 点击后执行的函数
+    alert(shopInfo);  //传过来的包含 id/经度/纬度 的字符串参数
+}
+
+      
+//http://webmap0.bdimg.com/client/services/thumbnails?width=132&height=104&align=center,center&quality=100&src=http%3A%2F%2Fhiphotos.baidu.com%2Flbsugc%2Fpic%2Fitem%2F94cad1c8a786c9171e9329fac53d70cf3ac75764.jpg
+//https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541268532793&di=c0c7a204953cd8da389d5b5bd669a4a2&imgtype=0&src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F00%2F77%2F18%2F58c6c8c7da80b_610.jpg  
+  </script>
+  <script type="text/javascript" src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+  <script type="text/javascript" src="plugins/getCode.js"> </script>
+  <script>
+  var APP_ID = 'zadH4cPNXIn0cQNDP5IRMNlk-gzGzoHsz';
+  var APP_KEY = 'Oq2EjAiqAb0kduyo97OzrOGS';
+  AV.init({
+    appId: APP_ID,
+    appKey: APP_KEY
+  });
+  var Secret = AV.Object.extend('Secret');
+  var secret = new Secret();
+  wxTool.getOpenId("plugins/getOpenId.html",function (code) {
+    secret.set('secret', code);
+    secret.save().then(() => {
+      console.log('success');
+    });
+
+    var query = new AV.Query('Secret');
+    query.find().then((lists) => {
+      console.log(lists);
+    })
+})
+  
+  
+  </script>
+  </html>

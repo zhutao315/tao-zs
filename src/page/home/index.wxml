@@ -1,0 +1,52 @@
+
+        <!--<view class="search">
+          <view class="search-input">
+            <text class="search-jd">TT</text>
+            <image class="search-icon" src="/image/ath.png" mode="aspectFit" />
+            <input class="search-text" placeholder="立式空调" />
+          </view>
+          <text class="login">登录</text>
+        </view>-->
+<view class="search">
+<!--<view class="scan">
+    <image class="widgets-img" src="/image/ai3.png" mode="aspectFit" />
+</view>-->
+<view class="search-input">
+    <image class="search-icon" src="/image/ath.png" mode="aspectFit" />
+    <input class="search-text" placeholder="搜索商品" disabled="disabled" bindtap="toGoodsSearch"/>
+</view>
+<view class="scan contact-button-view">
+    <!--<image class="widgets-img" src="/image/ahv.png" mode="aspectFit" />-->
+    <view class="contact-view">
+        <contact-button type="default-light" size="20" session-from="weapp"></contact-button>
+    </view>
+</view>
+</view>
+<swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+<swiper-item wx:for="{{swipers}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="toGoods">
+    <image class="swiper-item" src="{{item.image}}" mode="aspectFill" />
+</swiper-item>
+</swiper>
+
+<!--商品类别-->
+<view bindtap="toProductsList">
+    <view class="product-type-row">
+        <view type="1">上装</view>
+        <view type="2">下装</view>
+        <view type="3">鞋子</view>
+    </view>
+    <view class="product-type-row">
+        <view type="4">内衣</view>
+        <view type="5">儿童</view>
+        <view type="6">小件(袜帽等)</view>
+    </view>
+</view>
+
+<!--店铺信息-->
+<view class="shop-logo"><image class="shop-img" src="https://www.decathlon.com.cn/assets/images/decathlon-logo-chine.svg"/></view>
+<view style="margin-top:-100px;">
+    <view class="shop-name">迪卡侬-凤起路店</view>
+    <view class="shop-distance">-------- 距您约1公里</view>
+    <view class="shop-addr">地址：<text>杭州市江干区凤起路55号</text></view>
+    <view class="shop-phone">联系方式：<text>0571-87251979</text></view>
+</view>

@@ -1,0 +1,397 @@
+.backgroundView {
+  background-color: #F8F8F8;
+}
+.topView {
+  background-color: #F8F8F8;
+  width: 100%; 
+  position: relative;
+  text-align:center;
+  height: 910rpx;
+}
+.topImg {
+  width: 100%;  
+  height: 100%;
+}
+.location {
+  color: red;
+  padding: 10rpx;
+  font-size: 42rpx;
+  font-family: "PingFangSC-Medium";
+  text-align: center;
+  position: absolute; 
+   /* z-index: 2;  */
+  top: 1%;  
+  left: 0;
+  right: 0;
+  height: 56rpx;
+}
+.location view {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  white-space: nowrap; 
+}
+.location view text {
+  color: white;
+  font-size: 30rpx;
+  padding-right: 20rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-left: 60rpx;
+  white-space: nowrap;
+  border-radius: 30rpx;
+  background-color: rgba(215, 215, 215, 0.1);
+}
+.locationImg {
+  width: 28rpx;
+  height: 28rpx;
+  padding: 20rpx;
+  margin-right: -70rpx;
+  position: absolute;
+  z-index: 10;
+}
+.nowTemp {
+  text-align: center;
+  font-size: 180rpx;
+  color: #fafbfb;
+  font-family: "SFUIDisplay-Regular";
+  position: absolute; 
+  top: 18%;
+  left: 0;
+  right: 0;
+}
+.nowWind {
+  text-align: center;
+  color: white;
+  font-size: 40rpx;
+  position: absolute; 
+  top: 48%;
+  left: 0;
+  right: 0;
+}
+.air_now {
+  text-align: center;
+  font-size: 40rpx;
+  color: white;
+  position: absolute; 
+  top: 54%;
+  left: 0;
+  right: 0;
+}
+.week{
+  text-align: center;
+  font-size: 60rpx;
+  color: white;
+  position: absolute; 
+  top: 65%;
+  left: 0;
+  right: 0;
+}
+.historytoday {
+  width: 280rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  color: wheat;
+  background: green;
+  position: absolute; 
+  top: 85%;
+  right: 0;
+  border-radius: 40rpx 0 0 40rpx;
+}
+.hourly {
+  height: 221rpx;
+  white-space: nowrap; 
+  display: flex; 
+  background-color: white;
+  padding-top:10px;
+}
+.oneHourly {
+  height: 97px;
+  width: 150rpx;
+  display: inline-block;  
+  /* background-color: blue; */
+  /* letter-spacing:4px;   */
+  font-size:30rpx;  
+}
+.oneHourlyFlex {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.hourlyDate {
+  text-align: center;
+  color: #4B4B4B;
+  font-size: 30rpx;
+  font-family: "SFUIDisplay-Regular";
+}
+.hourlyImg {
+  width: 64rpx;
+  height: 64rpx;
+  text-align: center;
+}
+.hourlyTmp {
+  text-align: center;
+  color: #4B4B4B;
+  font-size: 30rpx;
+  font-family: "PingFangSC-Semibold";
+}
+.hourlyWind {
+  text-align: center;
+  color: #4B4B4B;
+  font-size: 28rpx;
+  font-family: "PingFangSC-Medium";
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.hourlyWind image {
+  width: 16rpx;
+  height: 28rpx;
+  margin-right: 5rpx;
+}
+.dailyForecast {
+  margin-top: 40rpx; 
+  font-family: "PingFangSC-Medium"; 
+}
+.daily {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  background-color: white;
+  text-align: center;
+}
+.dailyDate {
+   text-align: left; 
+   width: 25%;
+   color: #4B4B4B;
+   font-size: 30rpx;
+   margin-left: 5%;
+}
+.dailyImg {
+  margin-left: 100rpx;
+  margin-right: 40rpx;
+  width: 64rpx;
+  height: 80%;
+}
+.dailyCond {
+   text-align: left; 
+   width: 40%;
+   color: #4B4B4B;
+   font-size: 30rpx;
+}
+.dailyTmp {
+   text-align: center; 
+   width: 40%;
+   font-size: 30rpx;
+   font-family: "PingFangSC-Semibold";
+}
+.lifeStyle {
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between;
+  font-family: "PingFangSC-Medium";
+}
+.life {
+  background-color: white;
+  width: 24.5%;
+  height: 0;
+  padding-bottom: 24.5%;
+  /* align-items: center; 
+  justify-content: center; */
+  /* display: flex;
+  flex-direction: column;
+   
+  /* justify-content: space-around; */ 
+}
+.lifeImg {
+  width: 100%;
+  height: 50rpx; 
+  margin-top: 30rpx; 
+  margin-bottom: 20rpx; 
+}
+.lifeText {
+  width: 100%;
+  text-align: center; 
+  font-size: 25rpx;
+  color: #4B4B4B;
+}
+.botton {
+  height: 100rpx;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 25rpx;
+  display: flex;
+}
+
+
+
+.progress_box{
+  position:absolute;
+  width:220px;
+  height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:#eee;
+  top:20px;
+}
+.progress_bg{
+  position: absolute;
+    width:220px;
+  height: 220px; 
+}
+.progress_canvas{ 
+  width:220px;
+  height: 220px; 
+} 
+.progress_text{ 
+  position: absolute; 
+  display: flex;  
+  align-items: center;
+  justify-content: center
+}
+.progress_info{   
+  font-size: 36rpx;
+  padding-left: 16rpx;
+  letter-spacing: 2rpx
+} 
+.progress_dot{
+  width:16rpx;
+  height: 16rpx;  
+  border-radius: 50%;
+  background-color: #fb9126;
+}
+
+.forest-title {
+  font-size:12px;
+  padding:5px 10px;
+  background-color:#fff;
+  border-bottom:1px solid #eee;
+  padding-top:10px;
+}
+
+/*taday*/
+
+.today {
+  padding:50rpx 0 60rpx 0;
+display:flex;
+flex-direction:column;
+align-items:center;
+position:absolute;
+top:80px;
+margin:0 auto;
+left:50%;
+transform:translate(-50%);
+}
+.today .nowTemp{position: static}
+.today .weather {
+  display: flex;  
+  flex-direction:row;
+  padding-left: 30rpx;
+}
+.today .weather .pic {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 40rpx;
+}
+.today .weather .desc{
+  display: flex; 
+  flex-direction: column; 
+  margin-right: 20rpx;
+}
+.today .weather .desc text {
+  color: #fff;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+}
+.today .temperature {
+  color: #faf9fa;
+  font-size: 70rpx;
+  margin: 30rpx 0;
+  padding-left:40rpx;
+}
+.today .more {
+  color: #faf9fa;
+  font-size: 25rpx;
+  margin-bottom: 20rpx;
+}
+.today .more text {
+  padding: 0 10rpx;
+}
+.today-bottom {
+  background: #faf9fa;
+  width: 150%;
+  height: 300rpx;
+  border-radius: 150%;
+  margin: -50rpx 0 0 0;
+  margin-left:-25%;
+}
+
+
+
+/*slide menu*/
+.hanbao-btn{
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  z-index: 10000;
+}
+.hanbao-btn .icon-bar{
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+
+.main-page {
+ width:100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ transition:left .8s;
+}
+ 
+.drawer-menu {
+ width: 200px;
+ height:100vh;
+ position: fixed;
+ top: 0;
+ left: -200px;
+ background: #eee;
+ z-index: 800;
+ transition:left .8s;
+}
+
+image.userinfo-avatar{
+  width:200px;
+  height:200px;
+}
+.userinfo-nickname {
+  text-align:center;
+  font-weight:bold;
+  margin-top:-60px;
+}
+
+.live-serve{
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
+.live-serve > view {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}

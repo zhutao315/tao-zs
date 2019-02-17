@@ -1,0 +1,46 @@
+<view class="container" style="color:#f4ecc8;">
+  <view class="header">
+    <view class="header-subtitle">
+      <image style="width:60px;height:60px;margin:5px auto;display:block;border-radius:60px;" src="{{image}}" />
+      <text>{{name}}</text>
+    </view>
+    <!--<text class="header-title"> 春节活动大抽奖 </text>-->
+  </view>
+
+  <view class="plate-wrap-box">
+    <view class="plate-border" animation="{{ aniData }}">
+      <!-- 转盘以及文字 -->
+      <view class="plate-wrap">
+        <view class="plate-box" wx:for="{{ lottery }}" wx:key="" style="top:-{{ (lottery.length - 6)<=2?(36+4*(lottery.length - 6)):50 }}rpx;transform-origin: 50% {{ (lottery.length - 6) <=2?(256+4*(lottery.length - 6)):270 }}rpx;border-top: {{ (lottery.length - 6) <=2?(256+4*(lottery.length - 6)):270 }}rpx solid #{{ index % 2==0?'ffeebe':'ffbb04' }};transform:translate(-50%,0) rotate({{ 360 / lottery.length * ( index )}}deg);border-left: {{ 440 / lottery.length * 2 }}rpx solid transparent;border-right: {{ 440 / lottery.length * 2 }}rpx solid transparent;">
+          <text class="text-box" style="color:#{{ index % 2==0?'ffbb04':'ffeebe' }}">{{ item }}</text>
+        </view>
+      </view>
+      <!-- 边框的小灯泡 -->
+      <view class="plate-wrap plate-light">
+        <view class="plate-box" wx:for="{{ lottery }}" wx:key="" style="top:-{{ (lottery.length - 6)<=2?(44+4*(lottery.length - 6)):60 }}rpx; transform-origin: 50% {{ (lottery.length - 6) <=2?(294+4*(lottery.length - 6)):310 }}rpx;border-top: {{ (lottery.length - 6) <=2?(294+4*(lottery.length - 6)):310 }}rpx solid transparent;transform:translate(-50%,0) rotate({{ 360 / lottery.length * ( index )}}deg);border-left: {{ 500 / lottery.length * 2 }}rpx solid transparent;border-right: {{ 500 / lottery.length * 2 }}rpx solid transparent;">
+          <view class="bulb"></view>
+        </view>
+      </view>
+    </view>
+    <view class="plate-btn-wrap" bindtap="startRollTap">
+      <view class="plate-btn-box">
+        <view class="plate-inner-btn">
+          <text>开始
+                抽奖</text>
+        </view>
+      </view>
+    </view>
+    <view class="lottery-plate-shadow"></view>
+  </view>
+
+  <view class="turntable-rule">
+    <view class="main-container-rule">
+      <text class="main-rule-title">活动规则：</text>
+      <text class="main-rule-item">1. 本次抽奖活动截止于2/20/2018</text>
+      <text class="main-rule-item">2. 用户抽取的金额只能用于当前页面对应的商品</text>
+      <text class="main-rule-item">3. 用户在下完单后可加陶千惠官方微信:tqh123456789</text>
+      <text class="main-rule-item">4. 经陶千惠核实会将金额通过红包发放给用户</text>
+      <text class="main-rule-item">5. 本产品拥有对该活动的一切解释权</text>
+    </view>
+  </view>
+</view>

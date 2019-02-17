@@ -1,0 +1,19 @@
+<div class="page" id="shopList">
+    
+    <div class="page__bd">
+        
+        <div v-for="(item, index) in list"  class="weui-cells weui-cells_after-title">
+            <div class="weui-cell" @click="viewShoes" data-id="{{index}}">
+                <div class="weui-cell__bd" style="font-size:12px;">
+                    <div>{{item.address}}</div>
+                    <div>
+                        <span>{{item.phone}}</span>
+                        <span style="font-weight:bold;">{{item.name}}</span>
+                    </div>
+                </div>
+                <div class="weui-cell__ft">距您 {{item.distance}}</div>
+            </div>
+        </div>
+
+    </div>
+</div>

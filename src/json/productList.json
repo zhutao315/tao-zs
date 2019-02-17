@@ -1,0 +1,142 @@
+{
+  "swipers": [{
+    "image": "/image/jd1.jpg",
+    "id":333,
+    "price": "123",
+    "coupon": "23",
+    "PurchasedNum":100,
+    "endTime":"1518192000000",
+    "name":"华为商品手机老年机中间件"
+  }, {
+    "image": "/image/jd2.jpg",
+    "id":335,
+    "price": "123",
+    "coupon": "23",
+    "PurchasedNum":100,
+    "endTime":"1518192000000",
+    "name":"华为商品手机老年机中间件"
+  }, {
+    "image": "/image/jd3.jpg",
+    "id":336,
+    "price": "123",
+    "coupon": "23",
+    "PurchasedNum":100,
+    "endTime":"1518192000000",
+    "name":"华为商品手机老年机中间件"
+  }
+  ],
+  "live": [
+    {
+      "image": "/image/live1.jpg",
+      "title1": "玩3C优惠大甩卖史上最低价格手机",
+      "title2": "限10天，12/25截止",
+      "title3": "10000",
+      "title4":  "500",
+      "id":443,
+      "PurchasedNum":1000,
+      "imgUrls":[
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057921620_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057922659_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057923813_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057924965_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057925958_middle.jpg"
+      ],
+      "detailImg": [
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_1.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_2.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_3.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_4.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_5.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_6.jpg"
+      ],
+      "name":"LANCOME兰蔻小黑瓶精华肌底液",
+      "price":500,
+      "endTime":"限10天，1/25/2018截止",
+      "coupon":100
+    },
+    {
+      "image": "/image/live1.jpg",
+      "title1": "玩3C优惠大甩卖史上最低价格手机",
+      "title2": "限10天，12/25截止",
+      "title3": "10000",
+      "title4":  "500",
+      "id":444,
+      "PurchasedNum":1000,
+      "imgUrls":[
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057921620_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057922659_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057923813_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057924965_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057925958_middle.jpg"
+      ],
+      "detailImg": [
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_1.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_2.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_3.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_4.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_5.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_6.jpg"
+      ],
+      "name":"LANCOME兰蔻小黑瓶精华肌底液",
+      "price":500,
+      "endTime":"1518192000000",
+      "coupon":100
+    },
+    {
+      "image": "/image/live1.jpg",
+      "title1": "玩3C优惠大甩卖史上最低价格手机",
+      "title2": "限10天，12/25截止",
+      "title3": "10000",
+      "title4":  "500",
+      "id":445,
+      "PurchasedNum":1000,
+      "imgUrls":[
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057921620_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057922659_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057923813_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057924965_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057925958_middle.jpg"
+      ],
+      "detailImg": [
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_1.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_2.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_3.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_4.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_5.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_6.jpg"
+      ],
+      "name":"LANCOME兰蔻小黑瓶精华肌底液",
+      "price":500,
+      "endTime":"1518192000000",
+      "coupon":100
+    },
+    {
+      "image": "/image/live1.jpg",
+      "title1": "玩3C优惠大甩卖史上最低价格手机",
+      "title2": "限10天，12/25截止",
+      "title3": "10000",
+      "title4":  "500",
+      "id":446,
+      "PurchasedNum":1000,
+      "imgUrls":[
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057921620_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057922659_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057923813_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057924965_middle.jpg",
+        "http://mz.djmall.xmisp.cn/files/product/20161201/148057925958_middle.jpg"
+      ],
+      "detailImg": [
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_1.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_2.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_3.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_4.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_5.jpg",
+        "http://7xnmrr.com1.z0.glb.clouddn.com/detail_6.jpg"
+      ],
+      "name":"LANCOME兰蔻小黑瓶精华肌底液",
+      "price":500,
+      "endTime":"1518192000000",
+      "coupon":100
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+
+.search{
+	display: flex;
+  	flex-direction: row;
+  	height: 50rpx;
+	align-items: center;
+}
+
+.search .scan{
+	display: flex;
+  flex-direction: column;
+	align-items: center;
+	width: 12%;
+  margin-left:2px;
+}
+
+.search .search-input{
+	padding: 5rpx;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	/*width: 80%;*/
+	-moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius:5px;
+	align-items: center;
+  margin:10rpx auto;
+
+  width:100%;
+  margin-left:12px;
+}
+
+.search-icon{
+	width: 30rpx;
+	height: 30rpx;
+}
+
+.search-text{
+	top:0px;
+	padding:0px;
+	left: 0rpx;
+	right: 0rpx;
+  width:100%;
+}
+
+.widgets-img{
+	width: 42rpx;
+	height: 42rpx;
+}
+.widgets-title{
+	color: #888888;
+    font-size: 1px;
+}
+
+
+
+
+
+.search {
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  height: 75rpx;
+  align-items: center;
+  background: #fbf9fe;
+  /*margin: 10rpx auto;*/
+  padding-top:10rpx!important;
+  padding-bottom:10rpx!important;
+}
+
+/*.search .search-input {
+  margin-left: 24rpx;
+  padding: 5rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  flex-grow: 1;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  align-items: center;
+  border: 1px solid #333;
+}*/
+
+.search-jd {
+  font-size: 36rpx;
+  color: #f23030;
+  margin-left: 10rpx;
+}
+
+.search-icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin: auto 10rpx;
+}
+
+.search-text {
+  flex-grow: 1;
+  font-size: 32rpx;
+  color: #666;
+}
+
+.login {
+  margin: auto 24rpx;
+  font-size: 32rpx;
+  color: #666;
+}
+
+swiper {
+  width: 750rpx;
+  height: 330rpx;
+  margin-bottom: 10px;
+}
+
+.swiper-item {
+  display: block;
+  width: 750rpx;
+  height: 322rpx;
+}
+
+/*product type*/
+.product-type-row view{
+  width:33.33%;
+  height:100px;
+  background-color:#0071b7;
+  border:1px solid #fff;
+  text-align:center;
+  line-height:100px;
+  font-size:15px;
+  font-weight:bold;
+  color:#fff;
+  display:inline-block;
+}
+swiper{
+  margin-bottom:0px;
+}
+
+.shop-logo{
+  margin:0 auto;
+  margin-top:-92px;
+width:231px;
+
+}
+.shop-logo image{
+  width:100%;
+}
+
+.shop-name{
+  text-align:center;
+  font-size:20px;
+  font-weight:bold;
+  color: #0071b7;
+}
+
+.shop-distance{
+  margin-left:45%;
+  font-size:15px;
+  color:#999;
+}
+.shop-addr,.shop-phone{
+  text-align:center;
+  margin-top:5px;
+}
