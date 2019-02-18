@@ -25,4 +25,4 @@ export default  (table, shopId, selectedType = {sex:'0', type:'ban'}) => {
         shoesList: renameImage(table[selectedType.sex][selectedType.type], selectedType),
         selectedTypeList: isSelect(selectedType),
     }
-};
+}
