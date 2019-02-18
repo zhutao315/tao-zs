@@ -1,7 +1,7 @@
 function calculateDates(startTime,endTime) {
     if(endTime < startTime) return "活动结束";
     return  (endTime - startTime)/(3600000*24)+1;
-};
+}
 function regroup(data) {
     let Rdata = {
         "swipers":[{
